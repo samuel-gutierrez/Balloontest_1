@@ -3,15 +3,21 @@
 #
 
 # IDEA:
-# 1.- Cada cierto tiempo toma fotos.
-# 2.- Analiza la foto en fn del peso.
-# 3.- Si cumple requisitos (liviana) la manda.
-# 4.- Pasa la foto al programa del ST.
-# 5.- Guarda la foto y los resultados.
+# 1.- Dada cierta condicion, el programa comienza a correr.
+#     Esta condicion puede ser una medida de presion, o de altura.
+# 2.- Dentro del programa, se toman fotos continuamente, digamos, cada 30 seg.
+# 3.- Por cada foto tomada, se guarda y se analiza en funcion del peso o el color.
+# 4.- Si la foto cumple la condicion, podria eventualmente enviarse. Esta misma foto pasa al program del ST.
+# 5.- Se guarda el resultado de ST: nombre de la foto y los parametros de orientacion.
 # 6.- Repeat.
 
 # 1.- Python imports.
 
-# 2.- Take picture.
+import task1
 
-# El problema aqui es q no se q tiempo de exposicion darle... podria partir con 100 ms hasta 1 s.
+# 2.- Code.
+thresh = 10
+ard_data = 11
+
+if ard_data > thresh:
+    task1.take_pic('pic1')
