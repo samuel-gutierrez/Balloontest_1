@@ -12,7 +12,6 @@
 # 6.- Repeat.
 
 # 1.- Python imports.
-
 import task1
 
 # 2.- Code.

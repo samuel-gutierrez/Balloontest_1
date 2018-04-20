@@ -1,6 +1,4 @@
-
 # 1.- Imports.
-
 import os
 
 # 2.- Functions definition.
