@@ -18,5 +18,10 @@ import task1
 thresh = 10
 ard_data = 11
 
-if ard_data > thresh:
-    task1.take_pic('pic1')
+#if ard_data > thresh:
+#    task1.take_pic('pic1')
+
+img_name = 'pic1'
+a = task1.return_histo(img_name)
+
+print a
