@@ -3,22 +3,33 @@
 #
 
 # IDEA:
-# 1.- Dada cierta condicion, el programa comienza a correr.
-#     Esta condicion puede ser una medida de presion, o de altura.
-# 2.- Dentro del programa, se toman fotos continuamente, digamos, cada 30 seg.
-# 3.- Por cada foto tomada, se guarda y se analiza en funcion del peso o el color.
-# 4.- Si la foto cumple la condicion, podria eventualmente enviarse. Esta misma foto pasa al program del ST.
-# 5.- Se guarda el resultado de ST: nombre de la foto y los parametros de orientacion.
-# 6.- Repeat.
+# 1.- El programa comienza a correr si ocurre una de las siguientes condiciones:
+#     a.- El globo alcanza la altura de 15 km.
+#     b.- El globo lleva dos horas desde su despegue.
+# 2.- Dentro del programa, se toman fotos continuamente.
+# 3.- Las fotos se toman con distintos tiempos de exposicion (en ms):
+#     20, 40, 60, 80, 100, 200, 300, 400, 500, 600, 700, 800. Todas las fotos se guardan.
+# 4.- Por cada foto adquirida, se corre el algoritmo de determinacion de color.
+# 5.- Todas las fotos que sean lo suficientemente negras (buscar umbral), se pasan al programa del ST.
+# 6.- Si el programa del ST encuentra matching, esa foto se guarda para enviar.
+# 7.- Cuando el programa del ST culmina, se vuelven a tomar fotos.
+# 8.- Si dado cierto tiempo (15 min) no se ha hecho ningun matching, el programa guarda una foto de las negras ...
+#     para enviar (por definir).
+# 9.- Sigue ejecutando esta accion por 2 horas, o hasta que se detecte que se corto un globo.
+# 10.- Finalmente, se corre el algoritmo de RJ por dos horas mas.
+# 11.- RPI off
 
 # 1.- Python imports.
 import task1
 
 # 2.- Code.
-thresh = 10
-ard_data = 11
 
-#if ard_data > thresh:
+altitude_thr = 10
+altitude_data = 11
+time1 = 15
+
+
+# if altitude_data >= altitude_thr:
 #    task1.take_pic('pic1')
 
 img_name = 'pic1'
