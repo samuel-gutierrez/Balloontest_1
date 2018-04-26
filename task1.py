@@ -19,8 +19,11 @@ def return_histo(name):
     file1 = DIR_img + str(name) + '.jpg'
     im = Image.open(file1)
     histo = im.histogram()
+    R = histo[0:255]
+    G = histo[256:511]
+    B = histo[512:767]
     im.show()
-    return histo
+    return histo, R, G, B
 
 
 def get_time():

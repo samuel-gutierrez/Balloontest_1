@@ -33,7 +33,7 @@ import task1
 # #    task1.take_pic('pic1')
 
 img_name = 'pic1'
-a = task1.return_histo(img_name)
+a, R, G, B = task1.return_histo(img_name)
 
 # now = task1.get_current_time()
 #
