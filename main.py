@@ -22,17 +22,33 @@
 # 1.- Python imports.
 import task1
 
-# 2.- Code.
-
-altitude_thr = 10
-altitude_data = 11
-time1 = 15
-
-
-# if altitude_data >= altitude_thr:
-#    task1.take_pic('pic1')
+# # 2.- Code.
+#
+# altt_thr = 10
+# altt_data = 11
+# time1 = 15
+#
+#
+# # if altitude_data >= altitude_thr:
+# #    task1.take_pic('pic1')
 
 img_name = 'pic1'
 a = task1.return_histo(img_name)
 
-print a
+# now = task1.get_current_time()
+#
+# print a
+# print now
+#
+#
+# h1 = 18
+# h1ref = 15
+# time1 = 17
+# time1ref = 15
+#
+# if h1 >= h1ref or time1 >= time1ref:
+#     print ' --- asdf ---'
+# else:
+#     pass
+#
+#
